@@ -65,8 +65,11 @@ public class TileReader {
 			return null;
 		}
 	}
-
-	public ArrayList<Tile> readFromXML(String fname) {
+	/*
+	* @Param read file 
+ 	* @Retun will catch and return
+ 	*/	
+		public ArrayList<Tile> readFromXML(String fname) {
 		File f = new File(fname);
 		return readFromXML(f);
 	}
@@ -82,7 +85,11 @@ public class TileReader {
 			return null;
 		}
 	}
-
+	
+	/*
+ 	* @Param will read file 
+ 	* @Retun null
+ 	*/	
 	public ArrayList<Tile> read(String fname) {
 		File f = new File(fname);
 		return read(f);
