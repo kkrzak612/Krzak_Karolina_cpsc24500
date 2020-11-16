@@ -43,7 +43,11 @@ public class TileWriter {
 		File f = new File(fname);
 		return writeToBinary(f,tiles);
 	}
-
+	
+	/*
+ 	* @Param will file output 
+ 	* @Retun if true or false
+ 	*/	
 	public boolean writeToBinary(File f, ArrayList<Tile> tiles) {
 		try {
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f));
@@ -59,7 +63,10 @@ public class TileWriter {
 		File f = new File(fname);
 		return writeToXML(f, tiles);
 	}
-
+	
+	/*
+ 	* @Param will encode files
+ 	*/
 	public boolean writeToXML(File f, ArrayList<Tile> tiles) {
 		try {
 			XMLEncoder enc = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(f)));
@@ -76,6 +83,11 @@ public class TileWriter {
 		return write(f, tiles);
 	}
 
+	/*
+ 	* @Param will write out files and texts 
+	 * @Retun if not false if false will not return files
+ 	*/
+	
 	public boolean write(File f, ArrayList<Tile> tiles) {
 		try {
 			String fname = f.getName().toUpperCase();
